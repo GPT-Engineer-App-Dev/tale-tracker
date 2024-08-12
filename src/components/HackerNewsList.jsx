@@ -32,16 +32,16 @@ const HackerNewsList = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">Hacker News Top Stories</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center text-hnblue-800">Hacker News Top Stories</h1>
       <form onSubmit={handleSearch} className="mb-8 flex gap-2">
         <Input
           type="text"
           placeholder="Search stories..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex-grow"
+          className="flex-grow border-hnblue-300 focus:ring-hnblue-500 focus:border-hnblue-500"
         />
-        <Button type="submit">
+        <Button type="submit" className="bg-hnblue-600 hover:bg-hnblue-700 text-white">
           <Search className="h-4 w-4 mr-2" />
           Search
         </Button>
